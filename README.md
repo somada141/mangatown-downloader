@@ -10,4 +10,4 @@ The `mangatown.py` module acts as a CLI interface to the code under `scraper.py`
 
 Download a single chapter through its URL and write it to a `.zip` file:
 
-    python mangatown.py url http://www.mangatown.com/manga/shen_yin_wang_zuo/c111/
+    python mangatown.py url http://www.mangatown.com/manga/shen_yin_wang_zuo/c111/ "shen_yin_wang_zuo - ch111.zip"
