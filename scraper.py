@@ -49,8 +49,13 @@ def get_chapter(url_chapter):
     while True:
         logger.info("Getting page '{0}'".format(url_next))
 
+        if url_next.startswith("/manga"):
+            url_next = "https://www.mangatown.com" + url_next
+        elif url_next.startswith("//www"):
+            url_next = "https:" + url_next
+        
         # get the page and parse it with `BeautifulSoup`
-        response = requests.get(url_next, timeout=60)
+        response = requests.get(url_next, timeout=60, verify=False)
 
         soup_page = bs4.BeautifulSoup(response.content, "lxml")
 
